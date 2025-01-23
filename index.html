@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nvb-homepage</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
+  <link rel="stylesheet" href="./modern-normalize.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./components/projects.css">
+  <link rel="stylesheet" href="./utils.css">
+  <style>
+    @import url("https://fonts.cdnfonts.com/css/proggy-clean");
+
+    #nirf_canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      /*pointer-events: none;*/
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="everything">
+
+    <div class="container">
+      <article class="projects">
+        <section></section>
+        <h1>NILS BROS</h1>
+        <h2>
+          <a href="https://nilsblix.github.io/xpbd-v2/" target="_blank">xpbd-v2</a>
+        </h2>
+        <p>
+          Jag har innan detta projekt byggt små och enkla fysik-motorer i Unity och C#. För att lära mig Javascript och
+          lite web-dev förde jag över min senaste Unity fysik-motor till Javascript. Eftersom det var mitt första
+          arbete utanför Unity strukturerade jag Javascript koden som om den vore C#. Detta ledde till massvis med
+          oeffektiv och ickehållbar kod. När jag senare bestämde mig för att uttöka fysik-delen av motorn, då den var
+          rudimentär, gammal och långsam, började jag istället från noll med detta projekt. Efter denna motorn bestämde
+          jag mig istället för att skriva all web-kod i Typescript istället. Jag tycker om att ha type-safety vid
+          compile-time istället för run-time. Mycket enklare att skriva kod.
+        </p>
+        <p>
+          Även om jag har fått lite nog av fysik-motorer har jag fortfarande lite saker kvar att bemästra, nämligen
+          <strong>universal-rigidbody-kollisioner</strong> med <strong>Coloumb friktion</strong>.
+        </p>
+        <section></section>
+        <h2>
+          <a href="https://nilsblix.github.io/nvb-imgui/dist/" target="_blank">nvb-imgui</a>
+        </h2>
+        <p>
+          Som nämnts i projektet-beskrivningen ovan är detta projekt byggt i Typescript. Tidigare project har inkluderat
+          debug-guis gjorda i css. Att bygga guis för debug syften i HTML och CSS är
+          dock jobbig då massor med <i>onchange</i> events behöver kedjas ihop när en ändring sker. I retained mode är
+          alltså data lagrad i självaste guin medan med immediate-mode lagrar guin ingen data. Detta innebär att man
+          behöver inga <i>onchange</i> events för att ändra elementen i guin. Guin byggs om för varje frame och all
+          datalagring sker externt.
+        </p>
+        <section></section>
+        <h2>
+          <a href="https://nilsblix.github.io/neural/dist/" target="_blank">neural</a>
+        </h2>
+        <p>
+          En liten artificiell neural nätverks motor som kan träna nätverk på MNIST-databasen. Strukturen borde kunna
+          appliceras på vilket typ av nätverk som helst, dock just nu kan endast ANNs tränas. Shoutout 3b1b. Första
+          projektet som använder mitt gui-framework.
+        </p>
+      </article>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
